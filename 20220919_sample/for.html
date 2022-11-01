@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const animals = ['狗', '貓', '馬', '天竺鼠', '勞贖']
+    for (let animal of animals) {
+      // for of 不能改值
+      // 迴圈的值會被改，但是原陣列的值不會改
+      // animal = 'abc'
+      document.write(`<p>${animal}</p>`)
+    }
+    console.log(animals)
+
+    for (const i in animals) {
+      // for in 拿到的索引是文字
+      console.log(typeof i)
+      document.write(`<p>${i} - ${animals[i]}</p>`)
+    }
+
+    const wdaf2e = {
+      classroom: '1114',
+      studentCount: 23,
+      name: '前端網頁開發技術',
+      year: 111,
+      semester: 1
+    }
+
+    for (const key in wdaf2e) {
+      document.write(`<p>${key} - ${wdaf2e[key]}</p>`)
+    }
+  </script>
+</body>
+</html>

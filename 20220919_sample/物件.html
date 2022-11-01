@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const wdaf2e = {
+      classroom: '1114',
+      studentCount: 23,
+      name: '前端網頁開發技術',
+      year: 111,
+      semester: 1
+    }
+    document.write(`<h1>${wdaf2e.name}</h1>`)
+    document.write(`<p>教室: ${wdaf2e['classroom']}</p>`)
+    document.write(`<p>學生人數: ${wdaf2e.studentCount}`)
+    document.write(`<p>年: ${wdaf2e.year}</p>`)
+    document.write(`<p>期: ${wdaf2e.semester}</p>`)
+
+    // const input = prompt('key')
+    // document.write(wdaf2e[input])
+
+    console.log(Object.keys(wdaf2e))
+    console.log(Object.values(wdaf2e))
+
+    const keys = Object.keys(wdaf2e)
+    for (let i = 0; i < keys.length; i++) {
+      console.log(keys[i], wdaf2e[keys[i]])
+    }
+  </script>
+</body>
+</html>

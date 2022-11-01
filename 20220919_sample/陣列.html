@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const animals = ['狗', '貓', '馬', '天竺鼠', '勞贖']
+    // .length 取文字或陣列長度
+    document.write(`有 ${animals.length} 種動物`)
+    document.write('<br>')
+    // [索引] 取指定的資料
+    // document.write(`第一個動物是 ${animals[0]}`)
+    // document.write('<br>')
+    // document.write(`第二個動物是 ${animals[1]}`)
+    // document.write('<br>')
+    // document.write(`第三個動物是 ${animals[2]}`)
+    for (let i = 0; i < animals.length; i++) {
+      document.write(`${animals[i]}<br>`)
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const fruits = [
+      { name: '蘋果', price: 100 },
+      { name: '香蕉', price: 30 },
+      { name: '哈密瓜', price: 150 }
+    ]
+    console.table(fruits)
+    document.write('<ul>')
+    for (let i = 0; i < fruits.length; i++) {
+      document.write(`<li>第 ${i+1} 種水果是 ${fruits[i].name}，${fruits[i].price} 元</li>`)
+    }
+    document.write('</ul>')
+
+    const website = {
+      name: 'Steam',
+      url: 'https://store.steampowered.com/',
+      games: [
+        { name: 'Marvel’s Spider-Man Remastered', price: 1490 },
+        { name: 'VRChat', price: 0 },
+        { name: 'DJMAX', price: 698 }
+      ]
+    }
+    document.write(`<a href="${website.url}">${website.name}</a>`)
+    document.write('<ul>')
+    for (let i = 0; i < website.games.length; i++) {
+      document.write(`<li>${website.games[i].name} - ${website.games[i].price}元</li>`)
+    }
+    document.write('</ul>')
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const products = [
+      { 
+        name: '技嘉 RTX 3080 Ti',
+        price: 29900,
+        producer: {
+          name: '技嘉',
+          address: '新店'
+        },
+        tag: ['3C', '顯卡']
+      },
+      { name: 'ASUS RTX 3060 Ti', 
+        price: 14990
+       },
+    ]
+    // Uncaught TypeError: Cannot read properties of undefined (reading 'name')
+    // 無法讀取 undefined 的 .name
+    for (let i = 0; i < products.length; i++) {
+      document.write(`
+        <p>
+          ${products[i].name}
+          <br>
+          製造商: ${products[i].producer?.name || '不知道'}，${products[i].producer?.address || '不知道'}
+        </p>`
+      )
+    }
+    // 如果是陣列，用 ?.[索引]
+    console.log(products[0].tag?.[1])
+  </script>
+</body>
+</html>

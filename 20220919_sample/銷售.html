@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const prices = [12, 16, 10, 14, 15]
+    const data = [
+      [33, 32, 56, 45, 33],
+      [77, 33, 68, 45, 23],
+      [43, 55, 43, 67, 65]
+    ]
+
+    const salesmanTotal = [0, 0, 0]
+    const productTotal = [0, 0, 0, 0, 0]
+
+    for (let i = 0; i < data.length; i++) {
+      for (let j = 0; j < data[i].length; j++) {
+        const total = data[i][j] * prices[j]
+        productTotal[j] += total
+        salesmanTotal[i] += total
+      }
+    }
+    
+    console.log(salesmanTotal)
+    console.log(productTotal)
+
+    // let sales1 = 0, sales2 = 0, sales3 = 0
+    // for (let j = 0; j <data[0].length; j++) {
+    //   sales1 += data[0][j] * prices[j]
+    // }
+    // for (let j = 0; j <data[1].length; j++) {
+    //   sales2 += data[1][j] * prices[j]
+    // }
+    // for (let j = 0; j <data[2].length; j++) {
+    //   sales3 += data[2][j] * prices[j]
+    // }
+    
+    // let product1 = 0, product2 = 0, product3 = 0, product4 = 0, product5 = 0
+    // for (let i = 0; i < data.length; i++) {
+    //   product1 += data[i][0] * prices[0]
+    // }
+    // for (let i = 0; i < data.length; i++) {
+    //   product2 += data[i][1] * prices[1]
+    // }
+    // for (let i = 0; i < data.length; i++) {
+    //   product3 += data[i][2] * prices[2]
+    // }
+    // for (let i = 0; i < data.length; i++) {
+    //   product4 += data[i][3] * prices[3]
+    // }
+    // for (let i = 0; i < data.length; i++) {
+    //   product5 += data[i][4] * prices[4]
+    // }
+
+    // console.log(sales1, sales2, sales3)
+    // console.log(product1, product2, product3, product4, product5)
+
+  </script>
+</body>
+</html>
